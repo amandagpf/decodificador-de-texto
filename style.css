@@ -29,6 +29,12 @@ main{
     border: none;
     resize: none;
     font-size: 30px;
+    background: #000000;
+    color: white;
+}
+
+.decodificador textarea::placeholder{
+    color: white;
 }
 
 .decodificador input{
@@ -38,9 +44,10 @@ main{
     border-radius: 20px;
     box-shadow: 2px 2px 2px #871FFE;
     font-size: 15px;
+    cursor: pointer;
 }
 
-.decodificador input:hover{
+.decodificador input:hover, .btn-copiar:hover{
     background-color: #BD0BA2;
 }
 
@@ -82,3 +89,15 @@ main{
     padding: 20px;
     
 }
+
+.btn-copiar{
+    width: 250px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 1.5px solid #871FFE;
+    background: #d5baf3;
+    font-size: 15px;
+    cursor: pointer;
+}
+
