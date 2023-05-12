@@ -1,0 +1,84 @@
+header{
+    width: 100vw;
+    height: 50px;
+    padding: 5px 0 5px 50px;
+    background: black;
+    
+}
+
+header img{
+    width: 200px;
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgb(67, 67, 67)30%, black 60%);
+}
+
+.decodificador{
+   
+    padding: 100px 50px;
+}
+
+.decodificador textarea{
+    display: block;
+    width: 600px;
+    height: 40px;
+    border: none;
+    resize: none;
+    font-size: 30px;
+}
+
+.decodificador input{
+    width: 288px;
+    height: 50px;
+    margin: 320px 10px 20px 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #871FFE;
+    font-size: 15px;
+}
+
+.decodificador input:hover{
+    background-color: #BD0BA2;
+}
+
+.btn-criptografar{
+    background: #871FFE;
+}
+
+.btn-descriptografar{
+    background: #d5baf3;
+}
+
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    margin: 0 40px;
+    padding: 40px;
+    background: #000000;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid #871FFE;
+    box-shadow: -2px -2px 10px white;
+}
+
+.resultado img{
+    width: 240px;
+}
+
+.resultado p{
+    width: 250px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.resultado :nth-child(2){
+    font-size: 28px;
+    padding: 20px;
+    
+}
