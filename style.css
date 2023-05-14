@@ -37,7 +37,7 @@ main{
     color: white;
 }
 
-.decodificador input{
+.decodificador button{
     width: 288px;
     height: 50px;
     margin: 320px 10px 20px 0;
@@ -47,7 +47,7 @@ main{
     cursor: pointer;
 }
 
-.decodificador input:hover, .btn-copiar:hover{
+.decodificador button:hover, .btn-copiar:hover{
     background-color: #BD0BA2;
 }
 
@@ -78,15 +78,21 @@ main{
     width: 240px;
 }
 
-.resultado p{
-    width: 250px;
+.frase-resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frase-resultado p{
+    width: 240px;
     text-align: center;
     font-size: 18px;
 }
 
-.resultado :nth-child(2){
+.frase-resultado :nth-child(1){
     font-size: 28px;
-    padding: 20px;
+    padding: 10px;
     
 }
 

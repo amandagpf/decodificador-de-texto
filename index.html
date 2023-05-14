@@ -15,20 +15,23 @@
 
     <main>
         <div class="decodificador">
-            <textarea name="frase-decodificar" id="" cols="30" rows="10" placeholder="Digite seu texto..."></textarea>
+            <textarea name="frase-decodificar" cols="30" rows="10" placeholder="Digite seu texto..."></textarea>
             
 
-            <input class="btn-criptografar" type="button" value="Criptografar">
+            <button class="btn-criptografar">Criptografar</button>
                 
-            <input class="btn-descriptografar" type="button" value="Descriptografar">
+            <button class="btn-descriptografar">Descriptografar</button>
         </div>
 
         <div class="resultado">
             <img src="./gato.png" alt="">
-            <p>Nenhuma mensagem encontrada</p>
-            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             
-            <input class="btn-copiar" type="button" value="Copiar">
+            <div class="frase-resultado">
+                <p>Nenhuma mensagem encontrada</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <button class="btn-copiar">Copiar</button>
         </div>
         
 
@@ -37,5 +40,6 @@
     <footer>
 
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
