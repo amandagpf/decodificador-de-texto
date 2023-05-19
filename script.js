@@ -2,25 +2,50 @@
 var criptografar = document.querySelector('button[class=btn-criptografar]');
 var descriptografar = document.querySelector('button[class=btn-descriptografar]');
 
+function criptografaFrase(){
 
-function criptografaFrase(evento){
     var fraseSecreta = document.querySelector('textarea').value;
-    alert(fraseSecreta);
 
-    function mostraFrase(){
-        var fraseCriptografada = fraseSecreta;
-        document.querySelector('div[class=frase-resultado]').innerHTML= fraseCriptografada;
-    }
+    var fraseCriptografada = fraseSecreta
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+   
+    var resultado = document.querySelector('.frase-resultado');
+    resultado.innerHTML = fraseCriptografada;
+    document.querySelector('textarea').value = '';
 
-    mostraFrase();
+    resultado.style.fontSize = "30px";
+    resultado.style.marginTop = "20px";
+
+    var gato = document.querySelector('.resultado-img');
+    gato.style.width = "200px";
 }
 
 criptografar.addEventListener('click', criptografaFrase);
 
-function descriptografaFrase(evento){
+function descriptografafaFrase(){
+
     var fraseSecreta = document.querySelector('textarea').value;
-    alert(fraseSecreta);
+
+    var fraseDescriptografada = fraseSecreta
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+   
+    var resultado = document.querySelector('.frase-resultado');
+    resultado.innerHTML = fraseDescriptografada;
+    document.querySelector('textarea').value = '';
+
+    resultado.style.fontSize = "30px";
+    resultado.style.marginTop = "20px";
+
+    var gato = document.querySelector('.resultado-img');
+    gato.style.width = "200px";
 }
 
-descriptografar.addEventListener('click', descriptografaFrase);
-
+descriptografar.addEventListener('click', descriptografafaFrase);

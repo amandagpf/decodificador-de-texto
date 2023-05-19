@@ -22,6 +22,11 @@ main{
     padding: 100px 50px;
 }
 
+.decodificador span{
+    color: rgba(255, 255, 255, 0.719);
+    margin: 0 0 0 6px;
+}
+
 .decodificador textarea{
     display: block;
     width: 600px;
@@ -31,6 +36,7 @@ main{
     font-size: 30px;
     background: #000000;
     color: white;
+    margin-top: 15px;
 }
 
 .decodificador textarea::placeholder{
@@ -40,7 +46,7 @@ main{
 .decodificador button{
     width: 288px;
     height: 50px;
-    margin: 320px 10px 20px 0;
+    margin: 280px 10px 20px 0;
     border-radius: 20px;
     box-shadow: 2px 2px 2px #871FFE;
     font-size: 15px;
