@@ -1,6 +1,9 @@
 
 var criptografar = document.querySelector('button[class=btn-criptografar]');
 var descriptografar = document.querySelector('button[class=btn-descriptografar]');
+var copiar = document.querySelector('.btn-copiar');
+
+//funções para criptografar e descriptografar
 
 function criptografaFrase(){
 
@@ -23,6 +26,7 @@ function criptografaFrase(){
 
     var gato = document.querySelector('.resultado-img');
     gato.style.width = "200px";
+      
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
     }
@@ -52,12 +56,35 @@ function descriptografafaFrase(){
     
         var gato = document.querySelector('.resultado-img');
         gato.style.width = "200px";
+
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
     }
+
 }
 
 descriptografar.addEventListener('click', descriptografafaFrase);
+
+//funcao que copia a frase que foi resultado da decodificação
+
+function copiarFrase(){
+    var fraseResultado = document.querySelector('.frase-resultado').innerHTML;
+
+    var temporariaInput = document.createElement('textarea');
+    temporariaInput.value = fraseResultado;
+    document.body.appendChild(temporariaInput);
+
+    temporariaInput.select();
+    temporariaInput.setSelectionRange(0, 99999);
+
+    document.execCommand('copy');
+    
+    alert(`O seu texto "${fraseResultado}" foi copiado com sucesso!`)
+}
+
+copiar.addEventListener('click', copiarFrase);
+
+//funções para os caracteres proibidos
 
 function caracteresEspeciais(frase){
     var regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?0123456789]/;
@@ -73,3 +100,4 @@ function letrasAcentuadas(frase){
     var regex = /[ÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÃÕ]/i;
     return regex.test(frase);
 }
+
