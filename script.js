@@ -27,6 +27,9 @@ function criptografaFrase(){
     var gato = document.querySelector('.resultado-img');
     gato.style.width = "200px";
       
+    
+    copiar.style.visibility = "visible";
+
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
     }
@@ -56,6 +59,7 @@ function descriptografafaFrase(){
     
         var gato = document.querySelector('.resultado-img');
         gato.style.width = "200px";
+        copiar.style.visibility = "visible";
 
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
@@ -64,6 +68,17 @@ function descriptografafaFrase(){
 }
 
 descriptografar.addEventListener('click', descriptografafaFrase);
+
+//Função para restaurar a forma inicial do resultado
+function restaurarResultado() {
+    var resultado = document.querySelector('.frase-resultado');
+    var gato = document.querySelector('.resultado-img');
+    
+    resultado.innerHTML = '<div class="frase-resultado"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar.</p></div>';
+    gato.style.width = '';
+    copiar.style.visibility = "hidden";
+
+  }
 
 //funcao que copia a frase que foi resultado da decodificação
 
@@ -80,6 +95,7 @@ function copiarFrase(){
     document.execCommand('copy');
     
     alert(`O seu texto "${fraseResultado}" foi copiado com sucesso!`)
+    restaurarResultado();
 }
 
 copiar.addEventListener('click', copiarFrase);
