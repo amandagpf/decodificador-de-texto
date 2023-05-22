@@ -93,6 +93,8 @@ function copiarFrase(){
     temporariaInput.setSelectionRange(0, 99999);
 
     document.execCommand('copy');
+
+    temporariaInput.parentNode.removeChild(temporariaInput);
     
     alert(`O seu texto "${fraseResultado}" foi copiado com sucesso!`)
     restaurarResultado();

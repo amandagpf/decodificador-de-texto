@@ -1,9 +1,26 @@
 header{
-    width: 100vw;
+    display: flex;
     height: 50px;
     padding: 5px 0 5px 50px;
     background: black;
-    
+    align-items: center;
+}
+
+.icones{
+    position: absolute;
+    right: 0;
+    padding: 50px;
+}
+
+.ion{
+    color: white;
+    font-size: 20px;
+    margin: 4px;
+}
+
+.ion:hover{
+    color: #871FFE;
+    font-size: 24px;
 }
 
 header img{
@@ -13,12 +30,11 @@ header img{
 main{
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     background: linear-gradient(to top, rgb(67, 67, 67)30%, black 60%);
 }
 
 .decodificador{
-   
     padding: 100px 50px;
 }
 
@@ -69,9 +85,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 25%;
     height: 70%;
-    margin: 0 40px;
+    margin: 0 0 0 120px;
     padding: 40px;
     background: #000000;
     border-radius: 20px;
@@ -114,3 +130,90 @@ main{
     visibility: hidden;    
 }
 
+footer{
+    background: rgb(67, 67, 67);
+    text-align: center;
+    height: 30px;
+    color: white;
+}
+
+/*CSS para Tablets*/
+@media (min-width: 768px) and (max-width: 1200px){
+    main{
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .decodificador button{
+        margin: 80px 10px 80px 0;
+    }
+
+    .resultado{
+        width: 65%;
+        height: 40%;
+        margin: 0 auto;
+    }
+
+    .resultado img{
+        width: 300px;
+    }
+}
+
+/*CSS para Smartphones*/
+@media (max-width: 767px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .icones{
+        position: relative;
+        padding: 0;
+    }
+
+    main{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .decodificador{
+        margin: 20px 0 0;
+        padding: 50px;
+    }
+
+    .decodificador textarea{
+        width: 250px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .decodificador button{
+        width: 110px;
+        height: 50px;
+        margin: 10px 10px auto;
+        box-shadow: 1px 1px 1px #871FFE;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .resultado{
+        width: 50%;
+        height: 40%;
+        margin: 0 auto;
+    }
+
+    .resultado img{
+        width: 160px;
+    }
+
+    .frase-resultado p{
+        font-size: 15px;
+    }
+    
+    .frase-resultado :nth-child(1){
+        font-size: 25px;
+    }
+}
