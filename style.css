@@ -16,7 +16,7 @@ header{
     color: white;
     font-size: 20px;
     margin: 4px;
-    transition: all 2s;
+    transition: all 0.5s;
 
 }
 
@@ -69,7 +69,7 @@ main{
     box-shadow: 2px 2px 2px #871FFE;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color 2s;
+    transition: background-color 0.5s;
 }
 
 .decodificador button:hover, .btn-copiar:hover{
