@@ -1,7 +1,6 @@
 var criptografar = document.querySelector('button[class=btn-criptografar]');
 var descriptografar = document.querySelector('button[class=btn-descriptografar]');
-var copiar = document.querySelector('.btn-copiar');
-
+var copiar = document.querySelector('button[class=btn-copiar]');
 //funções para criptografar e descriptografar
 
 function criptografaFrase(){
@@ -15,6 +14,11 @@ function criptografaFrase(){
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
+
+    copiar.style.visibility = "visible";
+    copiar.style.width = "80%";
+    copiar.style.minHeight = "40px";
+    copiar.style.marginTop = "5%";
    
     var resultado = document.querySelector('.frase-resultado');
     resultado.innerHTML = fraseCriptografada;
@@ -33,16 +37,12 @@ function criptografaFrase(){
     var gato = document.querySelector('.resultado-img');
     gato.style.width = "75%";
     
-    copiar.style.visibility = "visible";
-    copiar.style.width = "80%";
-    copiar.style.minHeight = "40px";
-    copiar.style.marginTop = "5%";
-
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
-    }
-    
+    }   
 }
+
+
 
 criptografar.addEventListener('click', criptografaFrase);
 
@@ -57,6 +57,11 @@ function descriptografarFrase(){
         .replace(/ai/g, 'a')
         .replace(/ober/g, 'o')
         .replace(/ufat/g, 'u');
+
+        copiar.style.visibility = "visible";
+        copiar.style.width = "80%";
+        copiar.style.minHeight = "40px";
+        copiar.style.marginTop = "5%";
 
         var resultado = document.querySelector('.frase-resultado');
         resultado.innerHTML = fraseDescriptografada;
@@ -75,15 +80,9 @@ function descriptografarFrase(){
         var gato = document.querySelector('.resultado-img');
         gato.style.width = "75%";
 
-        copiar.style.visibility = "visible";
-        copiar.style.width = "80%";
-        copiar.style.minHeight = "40px";
-        copiar.style.marginTop = "5%";
-
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
     }
-
 }
 
 descriptografar.addEventListener('click', descriptografarFrase);
@@ -92,15 +91,16 @@ descriptografar.addEventListener('click', descriptografarFrase);
 function restaurarResultado() {
     var resultado = document.querySelector('.frase-resultado');
     var gato = document.querySelector('.resultado-img');
-    
-    resultado.innerHTML = '<div class="frase-resultado"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar.</p></div>';
-    gato.style.width = '';
     copiar.style.visibility = "hidden";
 
     resultado.style.overflowY = "visible";
     resultado.style.maxHeight = "none";
     resultado.style.fontSize = "initial";
     resultado.style.marginTop = "initial";
+    
+    resultado.innerHTML = '<div class="frase-resultado"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar.</p></div>';
+    gato.style.width = '';
+
   }
 
 //funcao que copia a frase que foi resultado da decodificação
