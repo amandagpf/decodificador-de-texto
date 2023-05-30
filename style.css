@@ -57,6 +57,17 @@ main{
     margin-top: 15px;
 }
 
+.decodificador textarea::-webkit-scrollbar{
+    background-color: #d5baf3;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.decodificador textarea::-webkit-scrollbar-thumb{
+    background-color: #871FFE;
+    border-radius: 10px;
+}
+
 .decodificador textarea::placeholder{
     color: white;
 }
@@ -90,6 +101,7 @@ main{
     align-items: center;
     width: 25%;
     height: 70%;
+    max-height: 500px;
     padding: 40px;
     background: #000000;
     border-radius: 20px;
@@ -100,12 +112,25 @@ main{
 
 .resultado img{
     width: 240px;
+    margin-bottom: 10%;
 }
 
 .frase-resultado{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 350px;
+}
+
+.frase-resultado::-webkit-scrollbar {
+    background-color: #d5baf3;
+    width: 10px;
+    border-radius: 10px;
+}
+  
+.frase-resultado::-webkit-scrollbar-thumb {
+    background-color: #871FFE;
+    border-radius: 10px;
 }
 
 .frase-resultado p{
@@ -117,13 +142,12 @@ main{
 .frase-resultado :nth-child(1){
     font-size: 28px;
     padding: 10px;
-    
 }
 
 .btn-copiar{
     width: 250px;
     height: 40px;
-    margin-top: 25px;
+    margin-top: 20%;
     border-radius: 20px;
     border: 1.5px solid #871FFE;
     background: #d5baf3;
@@ -203,12 +227,17 @@ footer{
 
     .resultado{
         width: 50%;
-        height: 32%;
+        height: 40%;
         margin: 0 auto;
     }
 
     .resultado img{
         width: 150px;
+        margin-bottom: 0;
+    }
+
+    .frase-resultado{
+        max-width: 120%;
     }
 
     .frase-resultado p{
@@ -217,5 +246,9 @@ footer{
     
     .frase-resultado :nth-child(1){
         font-size: 20px;
+    }
+
+    .btn-copiar{
+        margin-top: 10%;
     }
 }

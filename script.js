@@ -1,4 +1,3 @@
-
 var criptografar = document.querySelector('button[class=btn-criptografar]');
 var descriptografar = document.querySelector('button[class=btn-descriptografar]');
 var copiar = document.querySelector('.btn-copiar');
@@ -23,12 +22,21 @@ function criptografaFrase(){
 
     resultado.style.fontSize = "30px";
     resultado.style.marginTop = "20px";
-
+    resultado.style.maxHeight = "100px";
+    
+    if (resultado.scrollHeight > parseInt(resultado.style.maxHeight)) {
+        resultado.style.overflowY = "scroll";
+      } else {
+        resultado.style.overflowY = "hidden";
+      }
+    
     var gato = document.querySelector('.resultado-img');
-    gato.style.width = "200px";
-      
+    gato.style.width = "75%";
     
     copiar.style.visibility = "visible";
+    copiar.style.width = "80%";
+    copiar.style.minHeight = "40px";
+    copiar.style.marginTop = "5%";
 
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
@@ -38,7 +46,7 @@ function criptografaFrase(){
 
 criptografar.addEventListener('click', criptografaFrase);
 
-function descriptografafaFrase(){
+function descriptografarFrase(){
 
     var fraseSecreta = document.querySelector('textarea').value;
 
@@ -56,10 +64,21 @@ function descriptografafaFrase(){
     
         resultado.style.fontSize = "30px";
         resultado.style.marginTop = "20px";
+        resultado.style.maxHeight = "100px";
     
+        if (resultado.scrollHeight > parseInt(resultado.style.maxHeight)) {
+            resultado.style.overflowY = "scroll";
+          } else {
+            resultado.style.overflowY = "hidden";
+          }
+      
         var gato = document.querySelector('.resultado-img');
-        gato.style.width = "200px";
+        gato.style.width = "75%";
+
         copiar.style.visibility = "visible";
+        copiar.style.width = "80%";
+        copiar.style.minHeight = "40px";
+        copiar.style.marginTop = "5%";
 
     }else{
         alert("A sua mensagem contém caracteres inválidos, verifique e tente novamente!");
@@ -67,7 +86,7 @@ function descriptografafaFrase(){
 
 }
 
-descriptografar.addEventListener('click', descriptografafaFrase);
+descriptografar.addEventListener('click', descriptografarFrase);
 
 //Função para restaurar a forma inicial do resultado
 function restaurarResultado() {
@@ -78,6 +97,10 @@ function restaurarResultado() {
     gato.style.width = '';
     copiar.style.visibility = "hidden";
 
+    resultado.style.overflowY = "visible";
+    resultado.style.maxHeight = "none";
+    resultado.style.fontSize = "initial";
+    resultado.style.marginTop = "initial";
   }
 
 //funcao que copia a frase que foi resultado da decodificação
